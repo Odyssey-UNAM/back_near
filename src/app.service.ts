@@ -9,7 +9,14 @@ export class AppService {
     'xBOdYxfJmOvYiOWAhZ4ua6xQHSB7fcZkJIAx2QZ8',
     'ObuJTjKs1WUQHAExJEnMoq7cr3r2ouTjcSVZ0V1d',
     'A5aC8RQOhmwlQkuLz8bPNPcBgkSZiLdQCmFkR9YE',
-    'LzbE7zxB6n4jdeDHI4fCsBmRzvPGsypMHcfwkvdA'
+    'LzbE7zxB6n4jdeDHI4fCsBmRzvPGsypMHcfwkvdA',
+    'PayuVafommV3he8QDzZdXw4kf4trOhDPSNvOSs6L',
+    'ADexkO1eDwl7JhZOFEKIn706eUDJmaBlSS3Ml43K',
+    'cJQ2PsEsosneuL0kRDniCVZxUekANtW2zm2NE0LH',
+    'fnM1DuD4NtUA3yaILFLBWQjyDsdfBdhEeXFpCc2y',
+    'Oa1q3AdvXZd5hAVaWcTQyQxhlKOwqHHFCA2QbL5H',
+    'BHuZwRKH7rvHJnSuCJcbNZRodww5Pd7xFKPetKQ3',
+    'fSIuwwNdF2IJx9rHB3TPSDphrDYMzg8n6ytpSp5T',
   ];
   private readonly BASE_URL = 'https://api.nasa.gov/neo/rest/v1';
 
