@@ -11,13 +11,24 @@ const common_1 = require("@nestjs/common");
 const axios_1 = require("axios");
 let AppService = class AppService {
     constructor() {
-        this.API_KEY = 'bZQQyist6UgMcNUmdxHPQbWiunaxFAf0UlXboQXS';
+        this.API_KEYS = [
+            'bZQQyist6UgMcNUmdxHPQbWiunaxFAf0UlXboQXS',
+            'SBDEqwgg0Gsja11XYuYZHQUjfRH9bxzGNp59jXeY',
+            'xBOdYxfJmOvYiOWAhZ4ua6xQHSB7fcZkJIAx2QZ8',
+            'ObuJTjKs1WUQHAExJEnMoq7cr3r2ouTjcSVZ0V1d',
+            'A5aC8RQOhmwlQkuLz8bPNPcBgkSZiLdQCmFkR9YE',
+            'LzbE7zxB6n4jdeDHI4fCsBmRzvPGsypMHcfwkvdA'
+        ];
         this.BASE_URL = 'https://api.nasa.gov/neo/rest/v1';
+    }
+    getRandomApiKey() {
+        const randomIndex = Math.floor(Math.random() * this.API_KEYS.length);
+        return this.API_KEYS[randomIndex];
     }
     async getAllData(startDate) {
         const url = `${this.BASE_URL}/feed`;
         const params = {
-            api_key: this.API_KEY,
+            api_key: this.getRandomApiKey(),
             start_date: startDate,
             end_date: startDate,
         };
@@ -41,7 +52,7 @@ let AppService = class AppService {
     async getOrbitalData(asteroidId) {
         const url = `${this.BASE_URL}/neo/${asteroidId}`;
         const params = {
-            api_key: this.API_KEY,
+            api_key: this.getRandomApiKey(),
         };
         try {
             const response = await axios_1.default.get(url, { params });
