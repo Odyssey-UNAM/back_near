@@ -47,7 +47,7 @@ export class AppService {
 
     try {
       const response = await axios.get(url, { params });
-      return response.data.orbital_data || {};
+      return response.data || {};
     } catch (error) {
       if (error.response && error.response.status === 404) {
         throw new HttpException(
