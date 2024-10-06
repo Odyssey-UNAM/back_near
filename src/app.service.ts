@@ -47,7 +47,10 @@ export class AppService {
 
     try {
       const response = await axios.get(url, { params });
-      return response.data || {};
+      console.log(response.data);
+      console.log(url);
+      return response.data  || {};
+
     } catch (error) {
       if (error.response && error.response.status === 404) {
         throw new HttpException(

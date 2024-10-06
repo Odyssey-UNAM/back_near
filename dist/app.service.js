@@ -45,7 +45,9 @@ let AppService = class AppService {
         };
         try {
             const response = await axios_1.default.get(url, { params });
-            return response.data.orbital_data || {};
+            console.log(response.data);
+            console.log(url);
+            return response.data || {};
         }
         catch (error) {
             if (error.response && error.response.status === 404) {
